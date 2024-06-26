@@ -61,6 +61,10 @@ section:nth-child(even){
     margin-bottom: 24px;
 }
 
+a{
+    text-decoration: none;
+}
+
 /* Navigation Bar */
 
 nav{
@@ -81,7 +85,6 @@ nav{
 .nav__link--anchor{
     margin: 0 12px;
     color: #242424;
-    text-decoration: none;
     font-weight: 700;
 }
 
@@ -153,7 +156,6 @@ nav{
 .about-me__link{
     font-size: 24px;
     color: #3F72AF;
-    text-decoration: none;
     padding: 0 16px;
 }
 
@@ -174,7 +176,8 @@ nav{
 }
 
 .about-me__img{
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
 }
 
 /* Tech Stack */
@@ -297,7 +300,6 @@ nav{
 .project__description--link{
     font-size: 20px;
     margin-right: 16px;
-    text-decoration: none;
 }
 
 .project__description--title,
@@ -310,4 +312,54 @@ nav{
 
 .project__description--sub-title{
     color: rgb(255, 140, 0);
+}
+
+/* Footer */
+
+footer{
+    background-color: #242424;
+}
+
+.footer__logo--img{
+    width: 70px;
+    height: 70px;
+}
+
+.footer__social--list{
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 28px;
+}
+
+.footer__row{
+    padding: 8% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__social--link, .footer__copyright, .footer__logo--popper{
+    color: #fff;
+}
+
+.footer__anchor{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.footer__logo--popper{
+    position: absolute;
+    right: 10px;
+    top: 25px;
+    font-weight: 700;
+    opacity: 0;
+    transition: all 300ms ease;
+}
+
+.footer__anchor:hover .footer__logo--popper{
+    transform: translateX(50px);
+    opacity: 1;
 }
