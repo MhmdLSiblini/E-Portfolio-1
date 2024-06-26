@@ -67,6 +67,14 @@ a{
     position: relative;
 }
 
+i{
+    transition: opacity 300ms ease;
+}
+
+i:hover{
+    opacity: 0.7;
+}
+
 .link__hover-effect:after{
     content: "";
     position: absolute;
@@ -127,7 +135,7 @@ nav{
 }
 
 .personal__logo{
-    font-size: 24px;
+    font-size: 28px;
     color: #3F72AF;
     margin: 0 12px;
     font-weight: bold;
@@ -163,6 +171,19 @@ nav{
     overflow: hidden;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
     margin-bottom: 24px;
+    animation: animate-profile-picture 800ms 200ms backwards;
+}
+
+@keyframes animate-profile-picture {
+    0% {
+        transform: scale(0);
+    }
+    80% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .about-me__picture{
@@ -172,11 +193,13 @@ nav{
 
 .about-me__info--title{
     margin-bottom: 16px;
+    animation: fade-up 650ms 400ms backwards;
 }
 
 .about-me__info--para{
     font-size: 20px;
     margin-bottom: 16px;
+    animation: fade-up 650ms 600ms backwards;
 }
 
 .about-me__link{
@@ -185,14 +208,29 @@ nav{
     padding: 0 16px;
 }
 
+.about-me__links{
+    animation: fade-up 650ms 800ms backwards;
+}
+
+@keyframes fade-up{
+    0%{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 .about-me__img--container{
     flex: 1;
     display: flex;
     align-items: center;
-    animation: Float 1600ms infinite alternate-reverse;
+    animation: float 1600ms infinite alternate-reverse;
 }
 
-@keyframes Float {
+@keyframes float {
     0%{
         transform: translateY(0);
     }
@@ -204,6 +242,16 @@ nav{
 .about-me__img{
     width: 80%;
     margin: 0 auto;
+    animation: fade-in 1200ms 1000ms backwards;
+}
+
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 /* Tech Stack */
@@ -258,7 +306,11 @@ nav{
 /* Projects */
 
 .project{
-    margin-bottom: 135px;
+    margin-bottom: 104px;
+}
+
+.project:last-child{
+    margin-bottom: 40px;
 }
 
 .project__img{
@@ -361,7 +413,7 @@ footer{
 }
 
 .footer__row{
-    padding: 8% 0;
+    padding: 2% 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -392,6 +444,7 @@ footer{
 }
 
 @media (max-width:768px){
+
     nav{
         height: 68px;
         margin-bottom: 16px;
@@ -423,13 +476,30 @@ footer{
     }
 }
 
-@media (max-width: 580px){
+@media (max-width: 620px){
+
+    .personal__logo{
+        font-size: 24px;
+    }
+
     .nav__link:not(:last-child){
         display: none;
     }
 }
 
 @media (max-width: 480px){
+
+    h1{
+        font-size: 24px;
+    }
+
+    .about-me__info--para {
+        font-size: 18px;
+    }
+
+    .about-me__img{
+        width: 100%;
+    }
 
     .project__description{
         padding: 0;
