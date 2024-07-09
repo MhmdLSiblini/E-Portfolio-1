@@ -7,6 +7,7 @@ This project is an e-portfolio aimed at showcasing my skills and projects for re
 ## Table of Contents
 
 - [Demo](#demo)
+- [Screenshots](#screenshots)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 
@@ -14,7 +15,7 @@ This project is an e-portfolio aimed at showcasing my skills and projects for re
 
 [Click Here To See The Hosted Site](https://mhmdlsiblini.github.io/E-Portfolio-1/)
 
-Some Screenshots from the Site:
+## Screenshots:
 
 ![Home Page](assets/Github-example.png)
 
