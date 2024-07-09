@@ -413,7 +413,7 @@ footer{
 }
 
 .footer__row{
-    padding: 2% 0;
+    padding: 32px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
