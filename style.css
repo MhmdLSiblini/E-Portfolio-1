@@ -99,6 +99,10 @@ i:hover{
     background-color: #000000;
 }
 
+.links__not_allowed{
+    cursor: not-allowed;
+}
+
 /* Navigation Bar */
 
 nav{
